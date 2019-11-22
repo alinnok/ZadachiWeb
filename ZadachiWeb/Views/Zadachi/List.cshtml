@@ -1,0 +1,26 @@
+@model ZadachiViewModel
+
+<a href="/Zadachi/Create">Добавить задачу</a>
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Тэг</th>
+        <th>Дата создания</th>
+    </thead>
+    <tbody>
+        @foreach (var zadacha in Model.Zadachi)
+        {
+        <tr>
+            <td>@zadacha.Id</td>
+            <td>@zadacha.Name</td>
+            <td>@zadacha.Description</td>
+            <td>@zadacha.Tag</td>
+            <td>@zadacha.CreationDate</td>
+            <td><a href="/Zadachi/Delete/@(zadacha.Id)" >Удалить</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

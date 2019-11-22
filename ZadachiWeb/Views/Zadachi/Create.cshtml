@@ -1,0 +1,13 @@
+@model ZadachiData.Entities.Zadacha
+
+<form action="Create" method="POST">
+@Html.LabelFor(x=> x.Name)
+<input type="text" asp-for="Name" >
+
+@Html.LabelFor(x=> x.Description)
+<input type="text" asp-for="Description">
+
+
+<input type="submit" value="Сохранить">
+
+</form>
